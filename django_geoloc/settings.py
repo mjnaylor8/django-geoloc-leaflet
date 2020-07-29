@@ -25,7 +25,7 @@ SECRET_KEY = 'u&omugnz9$5gq41-*l2%^!3p(2w30*)#v@a#vroq$vel3tb8=u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["192.168.1.250"]
 
 
 # Application definition
@@ -82,7 +82,7 @@ DATABASES = {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'NAME': 'djangogis',
         'USER': 'admingis',
-        'PASSWORD': 'qwerty123456',
+        'PASSWORD': 'qwerty1234',
         'HOST': 'localhost',
         'PORT': '5432',
 
