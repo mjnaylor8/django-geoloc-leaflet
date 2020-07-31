@@ -40,12 +40,14 @@ INSTALLED_APPS = [
     'django.contrib.gis',
     'leaflet',
     'bootstrap4',
-    'userprofile'
+    'userprofile',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -81,9 +83,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'NAME': 'djangogis',
-        'USER': 'admingis',
-        'PASSWORD': 'qwerty1234',
-        'HOST': 'localhost',
+        'USER': 'testing',
+        'PASSWORD': 'testing',
+        'HOST': '192.168.1.250',
         'PORT': '5432',
 
         # testing database
@@ -144,3 +146,5 @@ STATICFILES_DIRS = [
 # redirect url after login
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/accounts/login'
+
+CORS_ORIGIN_ALLOW_ALL = True 
